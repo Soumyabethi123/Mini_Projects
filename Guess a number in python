@@ -1,0 +1,28 @@
+
+# Guess a Number 
+
+print("Guess a number in 7 attempts")
+
+# The number is 20
+n = 20
+
+# Number of attempts
+G = 7
+n2=1
+while G:
+    n1= int(input("\nEnter your number:"))
+    if n1==n:
+        print("\nGreat you won in ",n2,"attempt")
+        break
+    else :
+        if n1>n :
+            print("\nNumber is wrong! \nYour number is too big")
+        else :
+            print("\nNumber is wrong! \nYour number is too small")
+        print('\nYou have only ',G-1,"chances")
+        G=G-1
+        n2=n2+1
+else :
+    print("\nGame Over")
+    print("\nThe number was 20")
+
