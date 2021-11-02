@@ -1,0 +1,46 @@
+#It will return wrong answer for (45*3),(56+9),(56/6)
+
+while True:
+  n1 =int(input("enter a number1:"))
+  n2 =int(input("enter a number2:"))
+  n3 = input("enter your operator:")
+
+  if n3=="*" :
+    if n1==45 and n2==3:
+        print("The product of two numbers is ",555)
+    else :
+        print("The product of two numbers is ",n1*n2)
+        
+  elif n3=="+" :
+    if n1==56 and n2==9:
+        print("The addition of two numbers is ",77)
+    else :
+        print("The addition of two numbers is ",n1+n2)
+        
+  elif n3 =="/":
+    if n1==56 and n2==6:
+        print("The division of two numbers is ",4)
+    else :
+        print("The division of two numbers is ",n1/n2)
+        
+  elif n3=="-":
+    print("The subtraction of two numbers is ",n1-n2)
+    
+  elif n3=="**":
+    print("Required answer is ",n1**n2)
+    
+  elif n3=="%":
+      print("Required answers is ",n1%n2)
+      
+  elif n3=="//":
+      print("The floor division of two numbers is ",n1//n2)
+    
+  else :
+    print("error! check your number")
+    
+  d1 =input("do you want to continue Y or N:") 
+  
+  if d1=="Y" :
+      continue
+  else :
+      break
