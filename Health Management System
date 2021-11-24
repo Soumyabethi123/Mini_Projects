@@ -1,0 +1,92 @@
+print("press 1 for add or 2 for retriew")
+n1=int(input())
+print("press 1 for harry 2 for rohan 3 for rohit")
+n2=int(input())
+print("press 1 for food 2 for exercise")
+n3 = int(input())
+
+import datetime
+def getdate():
+    return datetime.datetime.now()
+
+if n1==1:
+     if n2==1:
+         if n3==1:
+             print("What you have eaten")
+             a=input()
+             f=open("harry.food.txt","a")
+             f.write(str([str(getdate())])+":"+ a +"\n")
+             print("Successfully written")
+
+         else :
+             print("What you have done")
+             b=input()
+             f=open("harry.ex.txt","a")
+             f.write(str([str(getdate())]) + ":" + b + "\n")
+             print("Successfully written")
+
+     elif n2==2:
+         if n3==1:
+             print("What you have eaten")
+             a = input()
+             f = open("rohan.food.txt", "a")
+             f.write(str([str(getdate())]) + ":" + a + "\n")
+             print("Successfully written")
+
+         else :
+             print("What you have done")
+             b = input()
+             f = open("rohan.ex.txt", "a")
+             f.write(str([str(getdate())]) + ":" + b + "\n")
+             print("Successfully written")
+
+     else:
+         if n3==1:
+             print("What you have eaten")
+             a = input()
+             f = open("rohit.food.txt", "a")
+             f.write(str([str(getdate())]) + ":" + a + "\n")
+             print("Successfully written")
+
+         else:
+             print("What you have done")
+             b = input()
+             f = open("rohit.ex.txt", "a")
+             f.write(str([str(getdate())]) + ":" + b + "\n")
+             print("Successfully written")
+
+
+else :
+     if n2==1:
+         if n3==1:
+             f=open("harry.food.txt")
+             c=f.read()
+             print(c)
+
+         else :
+             f=open("harry.ex.txt")
+             c=f.read()
+             print(c)
+
+     elif n2==2:
+         if n3==1:
+             f = open("rohan.food.txt")
+             c = f.read()
+             print(c)
+
+         else :
+             f = open("rohan.ex.txt")
+             c = f.read()
+             print(c)
+
+     else :
+         if n3==1:
+             f = open("rohit.food.txt")
+             c = f.read()
+             print(c)
+
+         else:
+             f = open("rohit.ex.txt")
+             c = f.read()
+             print(c)
+
