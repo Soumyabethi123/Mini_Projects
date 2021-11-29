@@ -1,0 +1,66 @@
+import random
+comp_points=0
+user_points=0
+tries =0
+print("Let's start the game")
+print("S for Snake , G for Gun , W for Water")
+while tries<=10:
+
+    list = ["snake", "gun", "water"]
+    comp= random.choice(list)
+    user =input("enter your choice S,G,W :")
+
+    if comp=="snake":
+        print("your opponent's guess is Snake")
+        if user=="S":
+            print("Tie")
+        elif user=="G":
+            print("you won")
+            user_points += 1
+        else :
+            print("You lost")
+            comp_points += 1
+
+    elif comp=="gun":
+        print("Your opponent's guess is Gun")
+        if user=="G":
+            print("Tie")
+        elif user=="W":
+            print("You Won")
+            user_points += 1
+        else :
+            print("You lost")
+            comp_points +=1
+
+    else :
+        print("Your opponent's guess is Water")
+        if user=="W":
+            print("Tie")
+        elif user=="S":
+            print("You Won")
+            user_points += 1
+        else :
+            print("You Lost")
+            comp_points += 1
+
+    tries +=1
+
+print("")
+print("Now,let's see total score")
+if user_points==comp_points:
+    print("Your total score is",user_points)
+    print("Total score of your opponent is ",comp_points)
+    print("As score is equal , game is tie")
+
+elif user_points>comp_points:
+    print("Your total score is", user_points)
+    print("Total score of your opponent is ", comp_points)
+    print("Congrats, You Won ")
+
+else :
+    print("Your total score is", user_points)
+    print("Total score of your opponent is ", comp_points)
+    print("You Lost !!")
+    print("Better Luck Next time !!")
+
+
